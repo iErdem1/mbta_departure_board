@@ -1,4 +1,5 @@
 # INSTALL
+
 - Clone project from GitHub: `https://github.com/iErdem1/mbta_departure_board.git`
 - Create a virtual environment: `virtualenv venv -p python3.8`
 - Switch to virtual environment: `source venv/bin/activate`
@@ -21,7 +22,7 @@
 - Unit tests needs to be add. 
 - Frontend of the code needs a lot of improvements. For instance, I used `inline styling` for frontend because of the size of the project but makes code looks ugly. Can be sophisticated.
 - I could not find time to add `docstring`. If you have any further questions about the code itself, please do not hesitate to reach out. 
-- Sometimes(really rare) api sends broken trip detail data. I saw on the logs but I couldn't regenerate to prevent it. If it happens, restart the server. 
+- Sometimes(really rare) api sends broken trip detail data. I saw on the logs but I couldn't regenerate to prevent it. If it happens, just refresh the page or wait for auto refresh. (Debug mode is on, that's why I didn't catch the error.) 
 
 # REFERENCES
 - Digital-7 Font: http://www.styleseven.com/

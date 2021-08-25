@@ -3,9 +3,9 @@
 - Create a virtual environment: `virtualenv venv -p python3.8`
 - Switch to virtual environment: `source venv/bin/activate`
 - Install project requirements: `pip install -r requirements.txt`
+- Switch to `board` directory: `cd board`
 - Create `.env` file via `.env_template`: `cp .env_template .env`
 - Add your environment variables to `.env` file.
-- Switch to `board` directory: `cd board`
 - Run the application: `python app.py`
 - Go to `http://127.0.0.1:5000/departure_board` on your browser.
 
@@ -21,6 +21,7 @@
 - Unit tests needs to be add. 
 - Frontend of the code needs a lot of improvements. For instance, I used `inline styling` for frontend because of the size of the project but makes code looks ugly. Can be sophisticated.
 - I could not find time to add `docstring`. If you have any further questions about the code itself, please do not hesitate to reach out. 
+- Sometimes(really rare) api sends broken trip detail data. I saw on the logs but I couldn't regenerate to prevent it. If it happens, restart the server. 
 
 # REFERENCES
 - Digital-7 Font: http://www.styleseven.com/

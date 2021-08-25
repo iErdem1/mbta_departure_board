@@ -1,12 +1,10 @@
-from logging import basicConfig
-from os import stat
 from settings import BASE_URL, MBTA_API_KEY
 import requests
 from datetime import date
 
 
 class DataFetcher:
-    """Creates and get related data"""
+    """Gets related data"""
 
     @staticmethod
     def get_api_key():

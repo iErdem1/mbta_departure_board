@@ -5,7 +5,7 @@
 - Install project requirements: `pip install -r requirements.txt`
 - Create `.env` file via `.env_template`: `cp .env_template .env`
 - Add your environment variables to `.env` file.
-- Change to `board` directory: `cd board`
+- Switch to `board` directory: `cd board`
 - Run the application: `python app.py`
 - Go to `http://127.0.0.1:5000/departure_board` on your browser.
 

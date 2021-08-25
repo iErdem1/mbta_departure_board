@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="refresh" content="120">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="//db.onlinewebfonts.com/c/58045dabdc3a361cb9bb9faf2f1dd1f3?family=Digital-7" rel="stylesheet" type="text/css"/>
+    
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Oswald:300,400);
+        @import url(//db.onlinewebfonts.com/c/58045dabdc3a361cb9bb9faf2f1dd1f3?family=Digital-7);
+
+        body {
+            background-color: #222;
+        }
+
+        #currentTime {
+            font-size: 7em;
+            text-align: center;
+            font-family: 'Digital-7';
+            font-weight: 300;
+            color: #f0d90e;
+            margin: 50px auto;
+        }
+
+        #currentDate {
+            font-size: 4em;
+            text-align: center;
+            font-family: 'Digital-7';
+            font-weight: 300;
+            color: #f0d90e;
+            margin: 50px auto;
+        }
+
+        @font-face {
+            font-family: "Digital-7"; 
+            src: url("//db.onlinewebfonts.com/t/58045dabdc3a361cb9bb9faf2f1dd1f3.eot"); 
+            src: url("//db.onlinewebfonts.com/t/58045dabdc3a361cb9bb9faf2f1dd1f3.eot?#iefix") format("embedded-opentype"), 
+                url("//db.onlinewebfonts.com/t/58045dabdc3a361cb9bb9faf2f1dd1f3.woff2") format("woff2"), 
+                url("//db.onlinewebfonts.com/t/58045dabdc3a361cb9bb9faf2f1dd1f3.woff") format("woff"), 
+                url("//db.onlinewebfonts.com/t/58045dabdc3a361cb9bb9faf2f1dd1f3.ttf") format("truetype"), 
+                url("//db.onlinewebfonts.com/t/58045dabdc3a361cb9bb9faf2f1dd1f3.svg#Digital-7") format("svg"); 
+        }
+    </style>
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    {% block content %}
+    {% endblock %}
+
+    <!-- Optional JavaScript -->
+    <script>
+        window.onload = function () {
+            clock();
+            function clock() {
+                var now = new Date();
+                const [hour, min, sec] = [
+                    now.getHours().toString().padStart(2, "0"),
+                    now.getMinutes().toString().padStart(2, "0"),
+                    now.getSeconds().toString().padStart(2, "0"),
+                ]
+
+                document.getElementById("currentTime").innerHTML =
+                    hour + ":" + min + ":" + sec;
+                setTimeout(clock, 1000);
+            }
+
+            date();
+            function date() {
+                var date = new Date();
+                const [month, day, year] = [
+                    (date.getMonth()+1).toString().padStart(2, "0"), 
+                    date.getDate().toString().padStart(2, "0"), 
+                    date.getFullYear()
+                ];
+                document.getElementById('currentDate').innerHTML = month + '/' + day + '/' + year;
+            }
+        };
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

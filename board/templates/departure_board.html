@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}North Station Departure Board{% endblock %}
+{% block content %}
+
+<h5 id="currentDate"></h5>
+<h3 id="currentTime"></h1>
+
+<h1 style="color: #f87306fa; text-align: center; font-family: digital-7;">North Station Commuter Rail</h1>
+<table class="table table-sm table-striped table-dark table-hover">
+    <thead class="thead-light">
+      <tr style="font-size: xx-large; text-align: center;">
+        <th scope="col">Train #</th>
+        <th scope="col">Departure Time</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Status</th>
+        <th scope="col">Track</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for train in context %}
+      <tr style="font-size: xx-large; font-family: digital-7; color: #f0d90e; text-align: center;">
+        <td>{{ train.train_number }}</th>
+        <td>{{ train.departure_time }}</td>
+        <td>{{ train.destination }}</td>
+        <td>{{ train.status }}</td>
+        <td>{{ train.track }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

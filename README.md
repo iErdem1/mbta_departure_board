@@ -12,7 +12,7 @@
 
 # PROJECT DESCRIPTION
 - Project basically gets Boston North Station Commuter Rail departure data from MBTA API and then process related data and displays on a simple web app as `Departure Board` format. 
-- Data relied on MBTA API's `/predictions` endpoint results but mainly this data is incomlete. So, as a fallback, when the system couldn't get some relevant data from predictions, gets from `/schedules` endpoint. 
+- Data relied on MBTA API's `/predictions` endpoint results but mainly this data is incomplete. So, as a fallback, when the system couldn't get some relevant data from predictions, gets from `/schedules` endpoint. 
 
 # MISCELLANEOUS COMMENTS
 - API's predictions are not reliable. They use live data from trains, so data like `departure_time` or `stops` is not reliable all the time. 
@@ -20,9 +20,8 @@
 - Normally you do not have to have an API key to make limited amount of requests but that is also unrilable. I got `HTTPError: 429` pretty often (program does not request a lot) so I decided to pass key to url. You can get key from https://api-v3.mbta.com/
 - Board page refreshes itself in every 2 minutes. Normally I would pass the data with `AJAX` but I could not find time. Also, data stream is not huge so simple HTML refresh works fine on this project. 
 - Unit tests needs to be add. 
-- Frontend of the code needs a lot of improvements. For instance, I used `inline styling` for frontend because of the size of the project but makes code looks ugly. Can be sophisticated.
+- Frontend of the code needs a lot of improvements. For instance, I used `inline styling` for frontend because of the size of the project but makes code looks ugly. Frontend code could be more sophisticated.
 - I could not find time to add `docstring`. If you have any further questions about the code itself, please do not hesitate to reach out. 
-- Sometimes(really rare) api sends broken trip detail data. I saw on the logs but I couldn't regenerate to prevent it. If it happens, just refresh the page or wait for auto refresh. (Debug mode is on, that's why I didn't catch the error.) 
 
 # REFERENCES
 - Digital-7 Font: http://www.styleseven.com/
